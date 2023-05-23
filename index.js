@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const writeToFile = require('./writeReadMe.js');
-// const fs = require('fs');
+const fs = require('fs');
 
 // console.log(inquirer);
 
@@ -13,7 +13,7 @@ const writeToFile = require('./writeReadMe.js');
   
 
 
-// Create an array of questions for user input
+// Created an array of questions for user input
 
  
 const questions = [
@@ -25,7 +25,7 @@ const questions = [
             {
                 type: 'input',
                 name: 'description',
-                 message: 'Provide a short description explaining the what, why, and how of your project.',
+                message: 'Provide a short description explaining the what, why, and how of your project.',
             },
             {
                 type: 'input',
@@ -57,18 +57,32 @@ const questions = [
             },
             {
                 type: 'input',
+                name: 'questions',
+                message: 'What is your email address?',
+            },
+           
+            {
+                type: 'input',
                 name: 'github',
-                message: 'What is your Github username',
+                message: 'What is your Github username'
             }
            
 
     ]
-
+// This function has Inquirer get the questions then the answers are also printed out.
     function askQuestions () {
         return inquirer.prompt(questions)
             .then((answers) => {
-               const file= writeToFile.generateMd(answers)
-                console.log(file)
+               const file = writeToFile.generateMd(answers)
+// write file syntax is === fs.writeFile(filename, data[, options], callback)
+               fs.writeFile('ReadMe.md', file, function(err) {
+                if (err){
+                    console.log('No file was generated')
+                } else {
+                    console.log('Your new README.md file was generated!')
+                }
+               })
+                // console.log(file)
                return answers
             })
             .catch((error) => {
@@ -89,7 +103,7 @@ const questions = [
 
 // function writeToFile(fileName, data) {
     
-// write file syntax is === fs.writeFile(filename, data[, options], callback)
+
 // }
 
 

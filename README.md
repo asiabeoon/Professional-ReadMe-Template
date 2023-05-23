@@ -1,10 +1,10 @@
 
    
 # YES
-![license](https://img.shields.io/badge/license-GPL-blue.svg)
+![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description
-Yeah
+yes
 
 ## Table of Contents
 - [Installation](#installation)
@@ -16,18 +16,18 @@ Yeah
 - [License](#license)
 
 ## Installation
-N/A
+no
 
 ## Usage
-N/A
+no
 
 ## Credits
-N/A
+no
 
 ## License
-GPL
+MIT
 
 
 ## Questions
-a.bey@gmail.com
-https://github.com/asiabeoon
+aemail.com
+agithub.com

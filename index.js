@@ -28,9 +28,9 @@ const questions = [
                 message: 'Provide a short description explaining the what, why, and how of your project.',
             },
             {
-                type: 'input',
+                type: 'confirm',
                 name: 'table of contents',
-                message: 'Click enter and your table of Contents will be generated',
+                message: 'Will this project need a Table of Contents?',
 
             },
             {

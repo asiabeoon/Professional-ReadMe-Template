@@ -30,7 +30,7 @@ const questions = [
             {
                 type: 'input',
                 name: 'table of contents',
-                message: 'Optional: If your README is long, add a table of contents ',
+                message: 'Click enter and your table of Contents will be generated',
 
             },
             {
@@ -55,16 +55,18 @@ const questions = [
                 choices: ['MIT', 'GPL','BSD', 'GNU', 'N/A'],
        
             },
+            // Brackets around a name will turn the users input to a link
+
             {
                 type: 'input',
-                name: 'questions',
-                message: 'What is your email address?',
+                name: 'email',
+                message: 'Questions: What is your (email) address?',
+         
             },
-           
             {
                 type: 'input',
                 name: 'github',
-                message: 'What is your Github username'
+                message:'Questions: What is your [gitHub] address?'
             }
            
 
@@ -90,47 +92,20 @@ const questions = [
             })
     }
     askQuestions()
-//     .then( answers => {
-//         console.log(answers);
-//         readFormat(writeToFile.generateMd(answers.title));
-//       });
-    
 
-// init();
-   
 
-// // TODO: Create a function to write README file ---given code
 
 // function writeToFile(fileName, data) {
     
 
 // }
 
-
-
-// // TODO: Create a function to initialize app this will open up a menu which will begin the questions---given code
-// function init() {}
-
-// // // Function call to initialize app---given code
-// init();
-
-// const inquirer = require('inquirer');
-// console.log('Hello')
-
-// // const fs = require('fs');
-// // const util =require('util';)
-
-// //   .then((data) => {
-// //     // creating a file name .json can be .md for ReadMe
-// //     // look up fs write
-// //     // look up template literals
-// //     const filename = `${data.name.toLowerCase().split(' ').join('')}.md`;
-// //     //(`)  allows us to put JS variables into html or any other file format
-// //     // split in this case takes away the space inbetween what is inputed in What is your name?
-// //     // to follow.split ("o ") o space 
+// (`)  allows us to put JS variables into html or any other file format
+//  split in this case takes away the space inbetween what is inputed in What is your name?
+//  to follow.split ("o ") o space 
    
-// //     fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-// //       err ? console.log(err) : console.log('Success!')
-// //     );
-// //   });
+//     fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
+//       err ? console.log(err) : console.log('Success!')
+//     );
+//   });
 

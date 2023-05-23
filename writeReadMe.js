@@ -1,8 +1,9 @@
 // This will be the structore of the printed out readme file
 
-
+// !Licensed Under [] (https://img.shields.io/badge/license-${license}-blue.svg)`;
+// ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 function chooseLicense (license) { if (license != 'N/A')  {
-    return `!Licensed Under [GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+    return `![license](https://img.shields.io/badge/license-${license}-blue.svg)`;
     }
 
 }
@@ -46,6 +47,7 @@ ${answers.github}
       
     }
 }
+
 
 // Example on how to use module.exports
 // Log.js 

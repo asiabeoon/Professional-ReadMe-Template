@@ -1,12 +1,14 @@
-// This will be the structore of the printed out readme file
+// This will be the structure of the printed out readme file
 
-// !Licensed Under [] (https://img.shields.io/badge/license-${license}-blue.svg)`;
+// example from website https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links
 // ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+// tutor gave format of function using template literal
 function chooseLicense (license) { if (license != 'N/A')  {
     return `![license](https://img.shields.io/badge/license-${license}-blue.svg)`;
     }
 
 }
+// refer to Turtle exercise to retreive the below module.exports function
 
 module.exports = {
     generateMd: function(answers){
@@ -41,8 +43,8 @@ ${answers.license}
 
 
 ## Questions
-${answers.email}
-${answers.github}
+Email: ${answers.email}
+  Github: ${answers.github}
 `
       
     }

@@ -4,16 +4,11 @@ const fs = require('fs');
 
 // console.log(inquirer);
 
-// this function will create the new ReadMe file
-// function readFormat(readData){
-//     fs.writeFile('ReadMe.md', readData, (err) =>
-//       err ? console.error(err) : console.log('File saved successfully!')
-//     );
-//   }
+
   
 
 
-// Created an array of questions for user input
+// Created an array of questions for user input using example from Node Activities 19 and 20 along with turtle HW example
 
  
 const questions = [
@@ -55,7 +50,9 @@ const questions = [
                 choices: ['MIT', 'GPL','BSD', 'GNU', 'N/A'],
        
             },
+            
             // Brackets around a name will turn the users input to a link
+            // parenthesis around email will open outlook
 
             {
                 type: 'input',
@@ -76,7 +73,8 @@ const questions = [
         return inquirer.prompt(questions)
             .then((answers) => {
                const file = writeToFile.generateMd(answers)
-// write file syntax is === fs.writeFile(filename, data[, options], callback)
+
+// write file syntax is === fs.writeFile(filename, data[, options], callback) from teacher example and website https://www.tutorialsteacher.com/nodejs/nodejs-file-system
                fs.writeFile('ReadMe.md', file, function(err) {
                 if (err){
                     console.log('No file was generated')
@@ -95,13 +93,13 @@ const questions = [
 
 
 
-// function writeToFile(fileName, data) {
+
     
 
-// }
+//  Notes for Future reference
 
 // (`)  allows us to put JS variables into html or any other file format
-//  split in this case takes away the space inbetween what is inputed in What is your name?
+//  split in this case takes away the space in between what is inputed in What is your name?
 //  to follow.split ("o ") o space 
    
 //     fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
@@ -109,3 +107,9 @@ const questions = [
 //     );
 //   });
 
+// this function will create the new ReadMe file
+// function readFormat(readData){
+//     fs.writeFile('ReadMe.md', readData, (err) =>
+//       err ? console.error(err) : console.log('File saved successfully!')
+//     );
+//   }
